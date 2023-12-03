@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Employee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-section">
+        <img
+          src="{{url_for('static', filename='images/Fondo2.png')}}"
+          alt="Fondo"
+        />
+        <h1>Agregar empleado</h1>
+        <section class="contenido">
+          <div id="NuevoTab" class="new-container contenido-tab">
+            <form id="formulario" method="get">
+              <label for="pos">Posición: </label>
+              <input list="pos_o" name="pos" id="pos" />
+              <datalist id="pos_o">
+                <option value="60">60</option>
+                <option value="96">96</option>
+                <option value="101">101</option>
+                <option value="124">124</option>
+                <option value="139">139</option>
+                <option value="213">213</option>
+                <option value="251">251</option>
+                <option value="343">343</option>
+                <option value="347">347</option>
+                <option value="454">454</option>
+                <option value="500">500</option>
+                <option value="514">514</option>
+                <option value="538">538</option>
+                <option value="581">581</option>
+                <option value="698">698</option>
+                <option value="706">706</option>
+                <option value="723">723</option>
+                <option value="750">750</option>
+                <option value="780">780</option>
+                <option value="790">790</option>
+                <option value="841">841</option>
+                <option value="907">907</option>
+                <option value="970">970</option>
+                <option value="977">977</option>
+                <option value="1010">1010</option>
+                <option value="1056">1056</option>
+                <option value="1100">1100</option>
+                <option value="1111">1111</option>
+                <option value="1116">1116</option>
+                <option value="1133">1133</option>
+                <option value="1145">1145</option>
+                <option value="1181">1181</option>
+                <option value="1203">1203</option>
+                <option value="1210">1210</option>
+                <option value="1227">1227</option>
+                <option value="1230">1230</option>
+                <option value="1323">1323</option>
+                <option value="1359">1359</option>
+                <option value="1365">1365</option>
+                <option value="1373">1373</option>
+                <option value="1376">1376</option>
+                <option value="1380">1380</option>
+                <option value="1410">1410</option>
+                <option value="1439">1439</option>
+                <option value="1448">1448</option>
+                <option value="1488">1488</option>
+                <option value="1520">1520</option>
+                <option value="1559">1559</option>
+                <option value="1657">1657</option>
+                <option value="1661">1661</option>
+                <option value="1667">1667</option>
+                <option value="1683">1683</option>
+                <option value="1702">1702</option>
+                <option value="1745">1745</option>
+                <option value="1748">1748</option>
+                <option value="1783">1783</option>
+                <option value="1788">1788</option>
+                <option value="1819">1819</option>
+                <option value="1845">1845</option>
+                <option value="1884">1884</option>
+                <option value="1921">1921</option>
+                <option value="1974">1974</option>
+                <option value="2003">2003</option>
+                <option value="2046">2046</option>
+                <option value="2062">2062</option>
+                <option value="2076">2076</option>
+                <option value="2094">2094</option>
+                <option value="2167">2167</option>
+                <option value="2224">2224</option>
+                <option value="2338">2338</option>
+                <option value="2384">2384</option>
+                <option value="2427">2427</option>
+                <option value="2446">2446</option>
+                <option value="2456">2456</option>
+                <option value="2497">2497</option>
+                <option value="2553">2553</option>
+                <option value="2562">2562</option>
+                <option value="2567">2567</option>
+                <option value="2597">2597</option>
+                <option value="2622">2622</option>
+                <option value="2698">2698</option>
+                <option value="2718">2718</option>
+                <option value="2729">2729</option>
+                <option value="2745">2745</option>
+                <option value="2756">2756</option>
+                <option value="2802">2802</option>
+                <option value="2803">2803</option>
+                <option value="2817">2817</option>
+                <option value="2821">2821</option>
+                <option value="2847">2847</option>
+                <option value="2848">2848</option>
+                <option value="2856">2856</option>
+                <option value="2858">2858</option>
+                <option value="2913">2913</option>
+                <option value="2915">2915</option>
+                <option value="2939">2939</option>
+                <option value="2988">2988</option></datalist
+              ><br />
+              <!--<input type="number" id="pos"  /><br />-->
+
+              <label for="gp">Grupo de personal: </label>
+              <select id="gp" name="gp">
+                <option value="1">Direct</option>
+                <option value="2">Exempt</option>
+                <option value="3">Indirect</option>
+                <option value="4">Managers</option>
+                <option value="5">Non-Exempt</option></select
+              ><br />
+              <!--<input type="number" id="gp"  /><br />-->
+
+              <label for="aliq">Salario neto: </label>
+              <select id="aliq" name="aliq">
+                <option value="1">S5</option>
+                <option value="2">S6</option></select
+              ><br />
+              <!--<input type="number" id="aliq"  /><br />-->
+
+              <label for="cp">Código postal: </label>
+              <input type="text" id="cp" maxlength="10" /><br />
+
+              <label for="mr">Motivo de la baja: </label>
+              <select id="mr" name="mr">
+                <option value="100">Imp.Pat-Pensionado IMSS</option>
+                <option value="120">Imp.Pat-Terminación del Contrato</option>
+                <option value="130">Imp.Tra-Ausentismos continuos</option>
+                <option value="400">Imp.Tra-Bajo desempeño</option>
+                <option value="500">Imp.Tra-Falsificación de Documentos</option>
+                <option value="600">Imp.Tra-Jubilación</option>
+                <option value="700">Imp.Tra-LFT y/o Reglamento Int.</option>
+                <option value="800">Imp.Tra-Uso de drogas y/o bebi</option>
+                <option value="200">Muerte</option>
+                <option value="210">Vol-Ambiente de trabajo</option>
+                <option value="220">Vol-Cambio de domicilio</option>
+                <option value="230">Vol-Estudios</option>
+                <option value="240">Vol-Insatisfacción personal</option>
+                <option value="250">Vol-Maternidad</option>
+                <option value="260">Vol-Matrimonio</option>
+                <option value="270">Vol-No regreso / no dio razón</option>
+                <option value="280">Vol-Otro empleo</option>
+                <option value="290">Vol-Prob personales y/o fam.</option>
+                <option value="300">Vol-Problemas con transporte</option>
+                <option value="310">Vol-Razones médicas</option>
+                <option value="320">
+                  Vol-Transferencia entre planta
+                </option></select
+              ><br />
+              <!--<input type="number" id="mr"  /><br />-->
+
+              <!--<label for="tb">Tipo de Baja:</label>-->
+              <!--<input type="number" id="tb"  /><br />-->
+
+              <label for="banda">Banda: </label>
+              <select id="banda" name="banda">
+                <option value="1">DNO</option>
+                <option value="2">DO</option>
+                <option value="3">E3</option>
+                <option value="4">E4</option>
+                <option value="5">SL1</option></select
+              ><br />
+              <!--<input type="number" id="banda"  /><br />-->
+
+              <label for="alta">Alta: </label>
+              <input type="date" id="alta" /><br />
+
+              <label for="baja">Baja:</label>
+              <input type="date" id="baja" /><br />
+
+              <label for="regla">ReglaPHT:</label>
+              <input type="number" id="regla" /><br />
+
+              <label for="antclas">Antigüedad Clas:</label>
+              <input type="number" id="antclas" /><br />
+
+              <label for="ant">Antigüedad:</label>
+              <input type="number" id="ant" /><br />
+
+              <label for="clave">Clave de sexo:</label>
+              <input type="number" id="clave" /><br />
+
+              <label for="lugar">Lugar de nacimiento:</label>
+              <input type="text" id="lugar" /><br />
+
+              <label for="clas">Clasificacion L. N:</label>
+              <input type="number" id="clas" /><br />
+
+              <label for="age">Edad del empleado:</label>
+              <input type="number" id="age" /><br />
+
+              <label for="time"
+                >¿Cuanto tiempo tiene viviendo en Cd. Juarez?</label
+              >
+              <input type="number" id="time" /><br />
+
+              <label for="edocivil">Estado Civil</label>
+              <input type="number" id="edocivil" /><br />
+
+              <label for="hijos">Hijos</label>
+              <input type="number" id="hijos" /><br />
+
+              <button onclick="Enviar()">Enviar</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Puedes agregar más contenido específico para esta página si es necesario -->
+      </div>
+    </div>
+  </body>
+</html>
